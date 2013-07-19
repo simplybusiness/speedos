@@ -8,7 +8,7 @@ def generate_tasks path
     name = File.basename(item, '.*').to_sym
     if File.directory?(item)
       namespace name do
-        apple item
+        generate_tasks item
       end
     else
       desc "run the script located in #{item}"

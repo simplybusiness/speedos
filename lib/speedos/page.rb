@@ -2,7 +2,7 @@ module Speedos
   class Page
     def server
       if !@server
-        @server = BrowserMob::Proxy::Server.new(File.join(File.dirname(__FILE__), "..", "bin", "browsermob-proxy-2.0-beta-8", "bin", "browsermob-proxy"))
+        @server = BrowserMob::Proxy::Server.new(File.join(File.dirname(__FILE__), '..', '..', 'bin', 'browsermob-proxy-2.0-beta-8', 'bin', 'browsermob-proxy'))
         @server.start
       end
       @server

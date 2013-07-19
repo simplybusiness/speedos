@@ -13,8 +13,8 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'mongoid',              '3.1.4'
   gem.add_runtime_dependency 'faker',                '1.1.2'
   gem.add_runtime_dependency 'logger',               '1.2.8'
-  gem.add_runtime_dependency 'browsermob-proxy',     '1.1'
-  gem.add_runtime_dependency 'selenium-webdriver',   '2.3.3'
+  gem.add_runtime_dependency 'browsermob-proxy',     '0.1.1'
+  gem.add_runtime_dependency 'selenium-webdriver',   '2.33'
   gem.add_runtime_dependency 'capybara',             '2.1.0'
 
   gem.add_development_dependency 'rspec',            '2.14.1'

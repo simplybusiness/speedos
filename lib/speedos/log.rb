@@ -1,10 +1,11 @@
 module Speedos
   class Log
     def self.logger
-      @logger ||= Logger.new(File.join(File.dirname(__FILE__), "..", "log", "performance.log"))
+      @logger ||= Logger.new(STDOUT)
     end
 
     def self.logger= logger
+      logger = Logger.new(logger) if logger.is_a? String
       @logger = logger
     end
 

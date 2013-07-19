@@ -23,7 +23,7 @@ module Speedos
     end
 
     def inspect
-      "Entries: #{all_pages_name}"
+      "Entries: #{all_names}"
     end
   end
 end

@@ -1,0 +1,22 @@
+SCRIPTS_DIR = File.join(File.dirname(__FILE__), 'scripts')
+
+$:.unshift SCRIPTS_DIR
+require File.join(File.dirname(__FILE__), 'config', 'initializer')
+
+def generate_tasks path
+  Dir[File.join(path, '*')].each do |item|
+    name = File.basename(item, '.*').to_sym
+    if File.directory?(item)
+      namespace name do
+        apple item
+      end
+    else
+      desc "run the script located in #{item}"
+      task name do
+        load item
+      end
+    end
+  end
+end
+
+generate_tasks SCRIPTS_DIR

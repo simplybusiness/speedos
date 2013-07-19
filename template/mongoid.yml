@@ -1,0 +1,12 @@
+development:
+  sessions:
+    default:
+      database: speedos_dev
+      hosts:
+        - localhost:27017
+test:
+  sessions:
+    default:
+      database: speedos_test
+      hosts:
+        - localhost:27017

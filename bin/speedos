@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+$:.unshift(File.dirname(__FILE__) + '/../lib') unless $:.include?(File.dirname(__FILE__) + '/../lib')
+require 'fileutils'
+require 'rake'
+
+def create_folder path
+  if !File.exists?(path)
+    FileUtils.mkdir_p(path)
+    print_msg "Created", path
+  else
+    print_msg "Do Nothing", path
+  end
+end
+
+def create_file path
+  if !File.exists?(path)
+    name = File.basename(path)
+    FileUtils.cp File.join(File.dirname(__FILE__), '..', 'template', name), path
+    print_msg "Created", path
+  else
+    print_msg "Do Nothing", path
+  end
+end
+
+def print_msg action, msg
+  puts "%-10s: %s" % [action, msg]
+end
+
+
+
+case ARGV
+when ['init']
+  create_folder(File.join(Dir.pwd, 'helpers'))
+  create_folder(File.join(Dir.pwd, 'log'))
+  create_folder(File.join(Dir.pwd, 'config'))
+  create_folder(File.join(Dir.pwd, 'scripts'))
+  create_file(File.join(Dir.pwd, 'config', 'initializer.rb'))
+  create_file(File.join(Dir.pwd, 'config', 'mongoid.yml'))
+  create_file(File.join(Dir.pwd, 'Rakefile'))
+when ['rake']
+  require 'pry'; binding.pry
+  Rake.app
+else
+  puts '2'
+end
+

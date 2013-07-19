@@ -9,8 +9,10 @@ Gem::Specification.new do |gem|
   gem.name          = 'speedos'
   gem.require_paths = ['lib']
   gem.version       = "0.0.1"
+  gem.executables   = 'speedos'
 
   gem.add_runtime_dependency 'mongoid',              '3.1.4'
+  gem.add_runtime_dependency 'rake',                 '10.1.0'
   gem.add_runtime_dependency 'faker',                '1.1.2'
   gem.add_runtime_dependency 'logger',               '1.2.8'
   gem.add_runtime_dependency 'browsermob-proxy',     '0.1.1'

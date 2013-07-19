@@ -48,10 +48,10 @@ or
 ## Report
 You can access the performance data via `Record` object
 
-	Record.first.pages
+	Speedos::Record.first.pages
 	#=> [Entries: ["simplybusiness-main-page"], Entries: ["google-result-page"]]
 	
-	Record.first.pages.first
+	Speedos::Record.first.pages.first
 	#=> Entries: ["simplybusiness-main-page"]
 	
 	Speedos::Record.first.pages.first.total_load_time

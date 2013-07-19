@@ -73,7 +73,7 @@ If you use `init` to generate your structure, you should get `Rakefile` created.
 
 For example, if you have above scripts structure, then you should get the following rake tasks created
 
-	be rake -T
+	rake -T
 	
 	rake earth:grass  # run the script located in /Users/pwu/test/scripts/earth/grass.rb
 	rake human        # run the script located in /Users/pwu/test/scripts/human.rb

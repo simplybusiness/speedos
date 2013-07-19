@@ -60,7 +60,7 @@ you should put all your script under '/scripts'
 	  end
 	end
 	
-## To run the test
+## To execute the scripts
 If you use `init` to generate your structure, you should get `Rakefile` created. And it will create rake task for all the scripts you have created in `/scripts`
 
 	└── scripts

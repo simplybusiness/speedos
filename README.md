@@ -64,12 +64,12 @@ you should put all your script under '/scripts'
 If you use `init` to generate your structure, you should get `Rakefile` created. And it will create rake task for all the scripts you have created in `/scripts`
 
 	└── scripts
-    ├── earth
-    │   └── grass.rb
-    ├── human.rb
-    └── sky
-        ├── cloud.rb
-        └── rain.rb
+	    ├── earth
+	    │   └── grass.rb
+	    ├── human.rb
+	    └── sky
+	        ├── cloud.rb
+	        └── rain.rb
 
 For example, if you have above scripts structure, then you should get the following rake tasks created
 

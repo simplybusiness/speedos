@@ -7,14 +7,15 @@ Put speedos on your Gemfile
 
 Or, install it via rubygem
 
-	gem install speedos
+	$ gem install speedos
 	
 The easiest and quickest way to get you started is to run the init script
 
-	speedos init
+	$ speedos init
 
 and it will generate you with the following folder structure:
 
+	├── .irbrc
 	├── Rakefile
 	├── config
 	│   ├── initializer.rb
@@ -73,7 +74,7 @@ If you use `init` to generate your structure, you should get `Rakefile` created.
 
 For example, if you have above scripts structure, then you should get the following rake tasks created
 
-	rake -T
+	$ rake -T
 	
 	rake earth:grass  # run the script located in /Users/pwu/test/scripts/earth/grass.rb
 	rake human        # run the script located in /Users/pwu/test/scripts/human.rb
@@ -82,15 +83,17 @@ For example, if you have above scripts structure, then you should get the follow
 	
   
 ## Report
-You can access the performance data via `Record` object
+You can access the performance data via `Speedos::Record` object
 
-	Speedos::Record.first.pages
+	$ irb
+	
+	> Speedos::Record.first.pages
 	#=> [Entries: ["simplybusiness-main-page"], Entries: ["google-result-page"]]
 	
-	Speedos::Record.first.pages.first
+	> Speedos::Record.first.pages.first
 	#=> Entries: ["simplybusiness-main-page"]
 	
-	Speedos::Record.first.pages.first.total_load_time
+	> Speedos::Record.first.pages.first.total_load_time
 	#=> 3828.0 
 	# which is the total loading time for the page in milliseconds
 	

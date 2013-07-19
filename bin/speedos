@@ -36,5 +36,6 @@ when ['init']
   create_file(File.join(Dir.pwd, 'config', 'initializer.rb'))
   create_file(File.join(Dir.pwd, 'config', 'mongoid.yml'))
   create_file(File.join(Dir.pwd, 'Rakefile'))
+  create_file(File.join(Dir.pwd, '.irbrc'))
 end
 

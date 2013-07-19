@@ -37,10 +37,5 @@ when ['init']
   create_file(File.join(Dir.pwd, 'config', 'initializer.rb'))
   create_file(File.join(Dir.pwd, 'config', 'mongoid.yml'))
   create_file(File.join(Dir.pwd, 'Rakefile'))
-when ['rake']
-  require 'pry'; binding.pry
-  Rake.app
-else
-  puts '2'
 end
 

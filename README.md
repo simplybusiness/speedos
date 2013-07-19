@@ -1,7 +1,7 @@
 # Speeods
 
 ## Installation
-Put speedos on your Gem file
+Put speedos on your Gemfile
 
 	gem 'speedos'
 
@@ -35,7 +35,7 @@ or
 	
 	Speedos::Performance.test do |page|
 	  page.is 'simplybusiness-main-page' do
-	    # page.driver is an capybara session instance
+	    # page.driver is a capybara session instance
 	    page.driver.visit   'https://www.simplybusiness.co.uk/'
 	    page.driver.fill_in 'ctaText', with: "IT contractor"
 	  end

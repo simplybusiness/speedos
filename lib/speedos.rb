@@ -1,5 +1,9 @@
-require 'bundler'
-Bundler.require
+require 'mongoid'
+require 'faker'
+require 'logger'
+require 'browsermob-proxy'
+require 'selenium-webdriver'
+require 'capybara'
 
 require 'speedos/performance'
 require 'speedos/page'

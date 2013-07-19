@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
 
   gem.files         = `git ls-files`.split($\)
   gem.name          = 'speedos'
-  gem.require_paths = ['lib', 'models']
+  gem.require_paths = ['lib']
   gem.version       = "0.0.1"
 
   gem.add_runtime_dependency 'mongoid',              '3.1.4'

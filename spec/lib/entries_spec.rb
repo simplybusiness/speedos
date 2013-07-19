@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Entries do
+describe Speedos::Entries do
   context '#total_load_time' do
-    subject { Entries }
+    subject { Speedos::Entries }
 
     context 'when all tasks start the same time' do
       it 'returns the greatest load time' do
@@ -26,7 +26,7 @@ describe Entries do
   end
 
   context '#all_names' do
-    subject { Entries.new([{'pageref' => 'page 1'}, {'pageref' => 'page 2'},]) }
+    subject { Speedos::Entries.new([{'pageref' => 'page 1'}, {'pageref' => 'page 2'},]) }
 
     its(:all_names) { should =~ ['page 1', 'page 2'] }
   end

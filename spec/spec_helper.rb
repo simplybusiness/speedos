@@ -5,8 +5,14 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 ENV['APP_ENV'] = 'test'
-require File.join(File.dirname(__FILE__), '..', 'config', 'initializer')
-Bundler.require(:test)
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require
+
+require 'speedos' # and any other gems you need
+
+Speedos::Configuration.load_mongoid_config(File.join(File.dirname(__FILE__), 'support', 'mongoid.yml'))
+
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -18,7 +24,9 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
+
   DatabaseCleaner[:mongoid].strategy = :truncation
+
   config.before :each do
     Mongoid.purge!
     DatabaseCleaner.clean

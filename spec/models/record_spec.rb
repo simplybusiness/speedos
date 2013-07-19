@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Record do
+describe Speedos::Record do
   context 'scopes' do
-    subject { Record }
+    subject { Speedos::Record }
     before do
       @not_success = subject.create(success: false)
       @success     = subject.create(success: true)
@@ -13,12 +13,12 @@ describe Record do
   end
 
   context '#page' do
-    subject { Record.create() }
+    subject { Speedos::Record.create() }
     before do
       subject.log = {'entries' => []}
       subject.save
     end
-    it { subject.page('').should be_instance_of Entries }
+    it { subject.page('').should be_instance_of Speedos::Entries }
   end
 
 end

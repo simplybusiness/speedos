@@ -1,0 +1,6 @@
+test:
+  sessions:
+    default:
+      database: performance_thg_test
+      hosts:
+        - localhost:27017

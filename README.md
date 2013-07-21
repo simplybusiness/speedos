@@ -13,7 +13,7 @@ The easiest and quickest way to get you started is to run the init script
 
 	$ speedos init
 
-and it will generate you with the following folder structure:
+and it will generate following file structure for you:
 
 	├── .irbrc
 	├── Rakefile
@@ -27,7 +27,7 @@ and it will generate you with the following folder structure:
 ## Configuration
 
 ### Mongoid
-It is essential to let speedos know where the location of  your mongoid.yml by running this
+It is essential to let speedos know the location of your mongoid.yml by...
 
 	Speedos::Configuration.load_mongoid_config('/location/to/my/mongoid.yml')
 	
@@ -41,11 +41,11 @@ By default, speedos will output all the logging using STDOUT, you can override t
 
 or
 
-	# pass in the location where you want the log file to be saved
+	# the location where you want the log to be saved
 	Speedos::Log.logger = "/location/to/desire/log/location"
 
 ## Create your own script
-you should put all your script under '/scripts'
+you should put all your script under `/scripts`
 
 	require 'speedos'
 	

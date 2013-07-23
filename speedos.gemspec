@@ -10,6 +10,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.version       = "0.0.1"
   gem.executables   = 'speedos'
+  gem.license       = 'MIT'
 
   gem.add_runtime_dependency 'mongoid',              '3.1.4'
   gem.add_runtime_dependency 'rake',                 '10.1.0'

@@ -1,14 +1,14 @@
 Gem::Specification.new do |gem|
   gem.authors       = ['SimplyBusiness']
   gem.email         = ['peter.wu@xbridge.com']
-  gem.description   = %q{incorporates browsermod and capybara(selenium) to run front-end tests and capture performance information}
+  gem.description   = %q{Incorporates BrowserMob and Capybara(selenium) to run front-end tests and capture performance information}
   gem.summary       = %q{Speedos incorporates BrowserMob Proxy along with Capybara, recording the web traffic and time taken to load all elements on each of the pages within a user journey. The aim is to identify any performance related issues, such as specific items that take a long time to load on page.}
   gem.homepage      = %q{https://github.com/simplybusiness/speedos}
 
   gem.files         = `git ls-files`.split($\)
   gem.name          = 'speedos'
   gem.require_paths = ['lib']
-  gem.version       = "0.0.1"
+  gem.version       = "0.0.2"
   gem.executables   = 'speedos'
   gem.license       = 'MIT'
 

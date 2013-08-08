@@ -25,9 +25,9 @@ describe Speedos::Entries do
     end
   end
 
-  context '#all_names' do
-    subject { Speedos::Entries.new([{'pageref' => 'page 1'}, {'pageref' => 'page 2'},]) }
+  context '#name' do
+    subject { Speedos::Entries.new([{'pageref' => 'page 1'}, {'pageref' => 'page 1'},]) }
 
-    its(:all_names) { should =~ ['page 1', 'page 2'] }
+    its(:name) { should eq 'page 1' }
   end
 end

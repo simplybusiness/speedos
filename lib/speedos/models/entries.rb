@@ -18,12 +18,12 @@ module Speedos
       (latest_end_time && earliest_start_time) ? (latest_end_time - earliest_start_time) : 0
     end
 
-    def all_names
-      raw.map{|e| e['pageref']}.uniq
+    def name
+      raw.map{|e| e['pageref']}.uniq.first
     end
 
     def inspect
-      "Entries: #{all_names}"
+      "Entries: #{name}"
     end
   end
 end

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    speedos (0.0.2)
+    speedos (0.0.4)
       browsermob-proxy (= 0.1.1)
       capybara (= 2.1.0)
       faker (= 1.1.2)

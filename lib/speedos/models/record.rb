@@ -20,6 +20,10 @@ module Speedos
       Entries.new(entries.select{ |p| p["pageref"] == name })
     end
 
+    def export_har filename
+      File.open(filename, 'w') { |f| f.write({log: self.log}.to_json)}
+    end
+
     def self.report
       Record.successful.all.each do |record|
         puts record.id

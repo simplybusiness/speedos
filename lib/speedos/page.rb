@@ -37,7 +37,12 @@ module Speedos
 
     def reset_driver
       Capybara.register_driver :selenium do |app|
-        Capybara::Selenium::Driver.new(app, :profile => firefox_profile)
+        http_client         = Selenium::WebDriver::Remote::Http::Default.new
+        http_client.timeout = 300
+        Capybara::Selenium::Driver.new(app,
+          :profile     => firefox_profile,
+          :http_client => http_client,
+        )
       end
       Capybara.default_driver = :selenium
       @driver = Capybara::Session.new(:selenium)

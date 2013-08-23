@@ -1,13 +1,13 @@
 module Speedos
   class Performance
-    def self.test
-      Log.info("Test begins")
+    def self.test(name="")
+      Log.info("#{name} Test begins")
       page = Page.new
       page.new_har
 
       yield page if block_given?
 
-      Log.info("Test Complete")
+      Log.info("#{name} Test Complete")
       success = true
     rescue Exception => e
       Log.error("#{e}")

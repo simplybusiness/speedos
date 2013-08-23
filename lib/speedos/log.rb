@@ -2,6 +2,9 @@ module Speedos
   class Log
     def self.logger
       @logger ||= Logger.new(STDOUT)
+
+      @logger.formatter = proc { |severity, datetime, progname, msg| "[#{severity}] #{datetime}: #{msg}\n" }
+      @logger
     end
 
     def self.logger= logger

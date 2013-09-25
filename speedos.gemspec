@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.name          = 'speedos'
   gem.require_paths = ['lib']
-  gem.version       = "0.0.9"
+  gem.version       = "0.0.10"
   gem.executables   = 'speedos'
   gem.license       = 'MIT'
 
@@ -17,7 +17,6 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'faker',                '1.1.2'
   gem.add_runtime_dependency 'logger',               '1.2.8'
   gem.add_runtime_dependency 'browsermob-proxy',     '0.1.3'
-  gem.add_runtime_dependency 'selenium-webdriver',   '2.7'
   gem.add_runtime_dependency 'capybara',             '2.1.0'
 
   gem.add_development_dependency 'rspec',            '2.14.1'

@@ -23,14 +23,5 @@ module Speedos
     def export_har filename
       File.open(filename, 'w') { |f| f.write({log: self.log}.to_json)}
     end
-
-    def self.report
-      Record.successful.all.each do |record|
-        puts record.id
-        record.pages.each do |page|
-          puts "  %-30s %ss" % [page.all_names.first, (page.total_load_time / 1000).round(5)]
-        end
-      end
-    end
   end
 end

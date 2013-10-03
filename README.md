@@ -4,9 +4,10 @@
 Speedos incorporates [BrowserMob Proxy](http://bmp.lightbody.net) along with [Capybara](https://github.com/jnicklas/capybara), recording the web traffic and time taken to load all elements on each of the pages within a user journey. The aim is to identify any performance related issues, such as specific items that take a long time to load on page.
 
 ## Installation
-Put speedos on your Gemfile
+Put speedos on your Gemfile and using the new HarView
 
 	gem 'speedos'
+	gem 'har', git: 'https://github.com/PeterWuMC/har.git'
 
 Or, install it via rubygem
 

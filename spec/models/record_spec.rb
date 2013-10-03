@@ -41,7 +41,36 @@ describe Speedos::Record do
         subject.pages
       end
     end
+  end
 
+  describe '#refresh_information' do
+    subject { Speedos::Record.create }
+
+    let(:page)  { double(name: 'name', earliest_start_time: Time.current, latest_end_time: Time.current, total_load_time: 0) }
+    let(:pages) { [page] }
+
+    before do
+      subject.stub(:pages).and_return(pages)
+    end
+
+    it 'populates pages information' do
+      subject.refresh_information
+      info = subject.information
+      info.size.should eq 1
+      info.first.page_name.should eq page.name
+      info.first.began_at.should eq page.earliest_start_time
+      info.first.finished_at.should eq page.latest_end_time
+      info.first.total_duration.should eq page.total_load_time
+    end
+
+    context 'when there is already information for the record' do
+      before { @info = subject.information.create }
+
+      it 'clears all existing records' do
+        subject.refresh_information
+        subject.information.should_not include @info
+      end
+    end
   end
 
 end

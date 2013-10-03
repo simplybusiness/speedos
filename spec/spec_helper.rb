@@ -27,8 +27,11 @@ RSpec.configure do |config|
 
   DatabaseCleaner[:mongoid].strategy = :truncation
 
-  config.before :each do
-    Mongoid.purge!
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
     DatabaseCleaner.clean
   end
 end

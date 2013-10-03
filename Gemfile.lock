@@ -1,7 +1,16 @@
+GIT
+  remote: https://github.com/PeterWuMC/har.git
+  revision: 83ccefb7f0b98f6c721b91c75a86a29ed6e1d68f
+  specs:
+    har (0.0.10)
+      jschematic (>= 0.1.0)
+      json
+      launchy (>= 0.3.7)
+
 PATH
   remote: .
   specs:
-    speedos (0.0.9)
+    speedos (0.0.10)
       browsermob-proxy (= 0.1.3)
       capybara (= 2.1.0)
       faker (= 1.1.2)
@@ -38,10 +47,6 @@ GEM
     faker (1.1.2)
       i18n (~> 0.5)
     ffi (1.9.0)
-    har (0.0.9)
-      jschematic (>= 0.1.0)
-      json
-      launchy (>= 0.3.7)
     i18n (0.6.5)
     jschematic (0.1.0)
       addressable
@@ -84,5 +89,6 @@ PLATFORMS
 
 DEPENDENCIES
   database_cleaner
+  har!
   rspec
   speedos!

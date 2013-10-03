@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.name          = 'speedos'
   gem.require_paths = ['lib']
-  gem.version       = "0.0.10"
+  gem.version       = "0.0.11"
   gem.executables   = 'speedos'
   gem.license       = 'MIT'
 

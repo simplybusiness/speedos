@@ -21,7 +21,7 @@ module Speedos
 
     def finialise_record(log, success)
       record = Record.create(log: log, success: success)
-      record.refresh_information
+      record.refresh_information if success
     end
   end
 end

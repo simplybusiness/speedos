@@ -10,7 +10,7 @@ GIT
 PATH
   remote: .
   specs:
-    speedos (0.0.11)
+    speedos (0.0.12)
       browsermob-proxy (= 0.1.3)
       capybara (= 2.1.0)
       faker (= 1.1.2)

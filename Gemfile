@@ -4,3 +4,4 @@ gemspec
 gem 'rspec'
 gem 'database_cleaner'
 gem 'har', git: 'https://github.com/PeterWuMC/har.git'
+gem 'selenium-webdriver', '2.35.1'

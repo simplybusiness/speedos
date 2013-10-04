@@ -19,7 +19,9 @@ module Speedos
       page.server.stop
     end
 
-    def finialise_record(log, success)
+    private
+
+    def self.finialise_record(log, success)
       record = Record.create(log: log, success: success)
       record.refresh_information if success
     end

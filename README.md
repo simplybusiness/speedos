@@ -9,10 +9,10 @@ Put speedos on your Gemfile
 	gem 'speedos'
 	
 	# MUST ADD: 'selenium-webdriver', '2.35.1'
-	gem 'har', git: 'https://github.com/PeterWuMC/har.git'
+	gem 'selenium-webdriver', '2.35.1'
 	
 	# OPTIONAL (if you want to use a properly working harviewer):
-	gem 'selenium-webdriver', '2.35.1'
+	gem 'har', git: 'https://github.com/PeterWuMC/har.git'
 
 Or, install it via rubygem
 
